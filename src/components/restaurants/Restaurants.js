@@ -16,17 +16,15 @@ class Restaurants extends Component {
     render() {
         let style = this.state.hidden ? {display: "none"} : {};
         return (
-            this.props.restaurants.map((restaurant, i) => {
-                return (
-                    <div key={i}>
-                        <h3 onClick={() => this.toggleHidden()} key={i}>{restaurant}</h3>
+                    <div>
+                        <h3 onClick={() => this.toggleHidden()}>{this.props.restaurant}</h3>
                         <div style={style}>
-                            <Menus data={this.props.data[restaurant]}/>
+                            {this.props.data.map((menuItem, i) =>{
+                                return <Menus key={i} item={menuItem}/>
+                            })}
                         </div>
                     </div>
                     )
-            })
-         )
     }
     
 }

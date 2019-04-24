@@ -4,9 +4,7 @@ function Menus(props) {
 
     return (
         <div>
-            {props.data.map((item, i) => {
-                return <p key={i}>{item}</p>
-            })}
+            <p>{props.item}</p>
         </div>
     )
 }
