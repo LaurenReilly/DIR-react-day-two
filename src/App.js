@@ -1,6 +1,7 @@
 import React from 'react';
 import Cuisines from './components/restaurants/Cuisines';
 import Genre from './components/movies/Genre';
+import Form from './components/Form';
 import data from './restaurantData';
 import movieData from './movieData';
 import sportsData from './sportsData';
@@ -33,6 +34,7 @@ function App() {
             return <Cuisines key={i} cuisine={cuisine} restaurants={sportsData[cuisine]}/>
           })
         }
+        <Form/>
     </div>
   );
 }
