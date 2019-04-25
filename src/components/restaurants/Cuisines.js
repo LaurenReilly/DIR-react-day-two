@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import Restaurants from './Restaurants';
 
+import PropTypes from 'prop-types';
+
 class Cuisines extends Component {
     constructor(props) {
         super(props);
@@ -28,6 +30,10 @@ class Cuisines extends Component {
                 </div>
             )
     }
+}
+
+Cuisines.propTypes = {
+    restaurants: PropTypes.array.isRequired
 }
 
 export default Cuisines;
